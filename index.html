@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LexiGuess</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>LexiGuess</h1>
+    <p class="subtitle">Vocabulary Enhancement Game</p>
+
+    <!-- MENU -->
+    <div id="menu">
+        <button onclick="showDifficulty()">Start Game</button>
+        <button onclick="showInstructions()">Instructions</button>
+        <button onclick="exitGame()">Exit</button>
+    </div>
+
+    <!-- DIFFICULTY -->
+    <div id="difficulty" class="hidden">
+        <h2>Select Difficulty</h2>
+
+        <div class="cards">
+            <div class="card easy" onclick="startGame(4)">
+                <h3>Easy</h3>
+                <p>4-letter words</p>
+            </div>
+
+            <div class="card medium" onclick="startGame(5)">
+                <h3>Medium</h3>
+                <p>5-letter words</p>
+            </div>
+
+            <div class="card hard" onclick="startGame(6)">
+                <h3>Hard</h3>
+                <p>6+ letters</p>
+            </div>
+        </div>
+
+        <button onclick="backMenu()">Back</button>
+    </div>
+
+    <!-- GAME -->
+    <div id="game" class="hidden">
+        <h2 id="wordDisplay">_ _ _ _</h2>
+
+        <input type="text" id="guessInput" maxlength="10">
+        <button onclick="submitGuess()">Submit</button>
+
+        <p id="info">Attempts: 6 | Score: 0</p>
+    </div>
+
+    <!-- GAME OVER -->
+    <div id="gameOver" class="hidden">
+        <h2 id="resultText"></h2>
+        <button onclick="showDifficulty()">Play Again</button>
+        <button onclick="backMenu()">Main Menu</button>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
