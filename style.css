@@ -1,0 +1,60 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    text-align: center;
+    background: #f8f9fb;
+}
+
+.container {
+    margin-top: 60px;
+}
+
+h1 {
+    font-size: 40px;
+    color: #f4a300;
+}
+
+.subtitle {
+    color: gray;
+    margin-bottom: 30px;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    background: #444;
+    color: white;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+button:hover {
+    background: #222;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Difficulty Cards */
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    padding: 20px;
+    width: 150px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+}
+
+.easy { background: #28a745; }
+.medium { background: #f4a300; }
+.hard { background: #dc3545; }
+
+.card:hover {
+    transform: scale(1.05);
+}
